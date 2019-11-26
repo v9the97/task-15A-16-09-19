@@ -45,5 +45,20 @@ public class Employee {
 	}
 	
 	// making a new branch so that it avaliable to commit and merging
+	//deletion code only for testing it's not going to work so make commment below the code for the successful comlption of the code , do it now 
+	// code should have a proper comment on this line of code
+	
+	Configuration config=new Configuration().configure();
+				SessionFactory sf=config.buildSessionFactory();
+				Session session=sf.openSession();
+				Transaction tr=session.beginTransaction();
+
+				session.delete(e3);
+				
+				tr.commit();
+				
+				session.close();
+				
+				System.out.println("Data Deleted");
 	
 }
